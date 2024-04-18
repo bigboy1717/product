@@ -1,0 +1,10 @@
+<?php
+//Страница указанная в параметре URL, страница по умолчанию - 1
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+//Укажем число записей на странице
+$records_per_page = 5;
+
+//Вычисление лимита запроса
+$from_record_num = ($records_per_page * $page) - $records_per_page;
+?>
